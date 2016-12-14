@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="User_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+            align-content:center;
+            
+        }
+        .style2 {
+            height: 23px;
+            text-align: center;
+        }
+        .auto-style4 {
+            width: 549px;
+        }
+        #Password1 {
+            width: 291px;
+        }
+        #Text1 {
+            width: 286px;
+        }
+        .auto-style6 {
+            width:1080px;
+            text-align: center;
+            height: 40px;
+        }
+        .auto-style7 {
+            text-align: center;
+        }
+        .auto-style8 {
+            text-align: center;
+            width: 129px;
+        }
+        .auto-style10 {
+            width: 176px;
+            height: 26px;
+        }
+        .auto-style11 {
+            text-align: center;
+            width: 129px;
+            height: 26px;
+        }
+        .auto-style12 {
+            width: 549px;
+            height: 26px;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="style1"  frame="box">
+            <tr>
+                <td class="auto-style6" colspan="3" id="HEAD1" align="justify">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td class="auto-style6" colspan="3" id="HEAD" align="justify">
+                    <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="XX-Large" ForeColor="Red" Text="QUẢN LÝ TIN MUA BÁN XE MÁY"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style11" id="MENU" align="justify">
+                    <asp:LinkButton ID="LinkButton1" runat="server" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" ForeColor="Red" PostBackUrl="~/User/Admin.aspx">Danh sách tin</asp:LinkButton>
+                </td>
+                <td class="auto-style10">
+                    <asp:LinkButton ID="LinkButton2" runat="server" Font-Bold="True" Font-Names="Tahoma" Font-Size="Large" ForeColor="Red" PostBackUrl="~/User/Admin2.aspx">Quản lý User</asp:LinkButton>
+                </td>
+                <td class="auto-style12">
+                    </td>
+            </tr>
+            <tr>
+                <td class="auto-style8" id="MENU" align="justify">
+                    <asp:SqlDataSource ID="SqlDataSource_HangXe" runat="server" ConnectionString="<%$ ConnectionStrings:MuaBanXeConnectionString2 %>" SelectCommand="HangXe_GetAll" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
+                </td>
+                <td class="auto-style4" colspan="2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <p>
+                            &nbsp;</p>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style7" id="LABEL" colspan="3" align="center">
+                    <asp:Label ID="Label1" runat="server" BorderStyle="None" Text="BẢN QUYỀN BỞI ..." Font-Bold="True" Font-Size="X-Large" ForeColor="#0099FF"></asp:Label>
+                </td>
+                
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
